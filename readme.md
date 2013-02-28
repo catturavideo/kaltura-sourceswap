@@ -10,13 +10,17 @@ The Cattura platform enables you to have multiple source videos uploaded to Kalt
 
 2.  Copy the line below and paste into the "plug-in line" field on the Additional parameters field and click "Go".
 
-	sourceToggle.plugin=true&sourceToggle.path=/content/uiconf/ps/kaltura/kdp/v3.6.9/plugins/facadePlugin.swf&sourceToggle.relativeTo=video&sourceToggle.position=before&sourceToggle.includeInLayout=false&sourceToggle.button=1&sourceToggle.onPageJs1=
+	sourceToggle.plugin=true&sourceToggle.path=/content/uiconf/ps/kaltura/kdp/v3.6.9/plugins/facadePlugin.swf&sourceToggle.relativeTo=video&sourceToggle.position=before&sourceToggle.includeInLayout=false&sourceToggle.button=1&sourceToggle.onPageJs1=http://cf.cdn.catturavideo.com/assets/js/sourceswitch1.0.0.min.js
 
 	![Step 2](http://i.imgur.com/EWwl8u5.png)
 
 3.  Scroll down to `sourceToggle.button` and change the line underneath to the button number you used. In my case it would be 1.
 
 	![Step 3](http://i.imgur.com/EWAfzDG.png)
+
+## Notes ##
+
+ * This plugin may not work on custom installations of Kaltura. If you have a custom installation please take the steps necessary to update to a version that supports KDP v3.6.9 or greater.
 
 ## Changelog ##
 
