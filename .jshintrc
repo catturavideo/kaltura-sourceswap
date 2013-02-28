@@ -1,0 +1,20 @@
+{
+	"globals": {
+		"kWidget": false
+	},
+	"asi": false,
+	"browser": true,
+	"curly": true,
+	"es5": true,
+	"expr": false,
+	"jquery": true,
+	"latedef": true,
+	"multistr": false,
+	"newcap": true,
+	"nonew": true,
+	"strict": false,
+	"sub": false,
+	"trailing": true,
+	"undef": true,
+	"unused": true
+}
