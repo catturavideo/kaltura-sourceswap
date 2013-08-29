@@ -48,15 +48,8 @@ SourceToggle.prototype = {
         }
 
         //Play once the media is ready.
-        wrapBind(t.kdp, "mediaReady", function () {
-            t.kdp.sendNotification("doPlay");
-        });
-
-        wrapBind(t.kdp, "playerPlayed", function () {
-            t.kdp.sendNotification("doSeek", currentTime);
-        });
-
         t.kdp.sendNotification("changeMedia", { entryId: t.sources[next] });
+        t.kdp.setKDPAttribute("mediaProxy", "mediaPlayFrom", currentTime);
         t.current = next;
     },
 
