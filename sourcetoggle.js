@@ -53,13 +53,11 @@ SourceToggle.prototype = {
         t.current = next;
     },
 
-    getOption: function (cfg)
-    {
+    getOption: function (cfg) {
         return this.kdp.evaluate("{" + cfg + "}");
     },
 
-    getConfig: function (cfg)
-    {
+    getConfig: function (cfg) {
         return this.getOption("sourceToggle." + cfg);
     }
 };

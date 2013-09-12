@@ -10,7 +10,7 @@ The Cattura platform enables you to have multiple source videos uploaded to Kalt
 
 2.  Copy the line below and paste into the "plug-in line" field on the Additional parameters field and click "Go".
 
-	sourceToggle.plugin=true&sourceToggle.path=/content/uiconf/ps/kaltura/kdp/v3.6.9/plugins/facadePlugin.swf&sourceToggle.relativeTo=video&sourceToggle.position=before&sourceToggle.includeInLayout=false&sourceToggle.button=1&sourceToggle.onPageJs1=http://cf.cdn.catturavideo.com/assets/js/sourceswitch1.0.0.min.js
+	sourceToggle.plugin=true&sourceToggle.path=/content/uiconf/ps/kaltura/kdp/v3.6.9/plugins/facadePlugin.swf&sourceToggle.relativeTo=video&sourceToggle.position=before&sourceToggle.includeInLayout=false&sourceToggle.button=1&sourceToggle.onPageJs1=http://cf.cdn.catturavideo.com/assets/js/sourcetoggle1.0.1.min.js&sourceToggle.iframeHTML5Js1=http://cf.cdn.catturavideo.com/assets/js/sourcetoggle-button1.0.1.min.js
 
 	![Step 2](http://i.imgur.com/EWwl8u5.png)
 
