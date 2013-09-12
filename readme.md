@@ -1,4 +1,4 @@
-# Cattura SourceSwitch for the Kaltura Player #
+# Cattura SourceToggle for the Kaltura Player #
 
 The Cattura platform enables you to have multiple source videos uploaded to Kaltura and utilized in the player experience. This plugin enables provides the ability to swap between the sources by clicking a toggle button embeded in the player.
 
@@ -24,9 +24,14 @@ The Cattura platform enables you to have multiple source videos uploaded to Kalt
 
 ## Changelog ##
 
+#### 1.0.1 ####
+
+ * Support for Kaltura's HTML5 player
+ * Support for KDP 1.9.1's mediaPlayFrom
+
 #### 1.0.0 ####
 
-Initial release
+* Initial release
 
 ## License ##
 
