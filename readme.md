@@ -27,7 +27,7 @@ The Cattura platform enables you to have multiple source videos uploaded to Kalt
 #### 1.0.1 ####
 
  * Support for Kaltura's HTML5 player
- * Support for KDP 1.9.1's mediaPlayFrom
+ * Support for KDP 1.9.1's `mediaPlayFrom`
 
 #### 1.0.0 ####
 
