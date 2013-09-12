@@ -1,7 +1,7 @@
-default: sourceswitch.min.js sourceswitch-button.min.js
+default: sourcetoggle.min.js sourcetoggle-button.min.js
 
-sourceswitch.min.js:
-	uglifyjs -mt < sourceswitch.js > sourceswitch.min.js
+sourcetoggle.min.js:
+	uglifyjs -mt < sourcetoggle.js > sourcetoggle.min.js
 
-sourceswitch-button.min.js:
-	uglifyjs -mt < sourceswitch-button.js > sourceswitch-button.min.js
+sourcetoggle-button.min.js:
+	uglifyjs -mt < sourcetoggle-button.js > sourcetoggle-button.min.js
