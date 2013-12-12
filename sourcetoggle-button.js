@@ -36,7 +36,7 @@ playerReady.done(function (player) {
     ui.find(".control-bar .kaltura-icon").closest(".rButton").after(template);
 
     // Doing 2 things at once here, Adding the click binding to toggle the video and sliding over the playhead to compensate for the new button.
-    playHead.css("right", parseInt(playHead.css("right")) + ui.find(".source-toggle").on("click", function () {
+    playHead.css("right", parseInt(playHead.css("right"), 10) + ui.find(".source-toggle").on("click", function () {
         if (switching.isResolved()) {
             switching = toggle.toggle(player.evaluate("{video.player.currentTime}"));
         }
@@ -60,6 +60,8 @@ function SourceToggle (player) {
 }
 
 SourceToggle.prototype = {
+    postFix: ".sourceToggle",
+
     toggle: function (currentTime) {
         var
         t = this,
@@ -69,13 +71,18 @@ SourceToggle.prototype = {
             return;
         }
 
-        //Play once the media is ready.
+        // Make the call to change the media.
         t.player.sendNotification("changeMedia", { entryId: t.sources[next] });
-        t.player.setKDPAttribute("mediaProxy", "mediaPlayFrom", currentTime);
-        t.current = next;
+        // Seek and listen in on the seek.
+        t.player.addJsListener("playerSeekEnd", function () {
+            t.player.sendNotification("doPlay");
+            t.player.removeJsListener("playerSeekEnd");
+        });
+        t.player.sendNotification("doSeek", currentTime);
 
+        t.current = next;
         return $.Deferred();
     }
 };
 
-})(mw, jQuery, window);
+})(window.mw, window.jQuery, window);
