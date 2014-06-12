@@ -39,7 +39,7 @@ The Cattura platform enables you to have multiple source videos uploaded to Kalt
 *_This is a known Kaltura issue and tickets have been issued._
 
 ***
-## Updating Player ## 
+## Updating Player  
 *  As of writing this document the HTML5 v2 player has not been released. 
 1. Login to KMC and go to studio. 
 2. Create or edit an existing player. 
