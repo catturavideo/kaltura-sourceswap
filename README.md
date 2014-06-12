@@ -19,7 +19,7 @@ The Cattura platform enables you to have multiple source videos uploaded to Kalt
 
 ## Notes ##
 
-![Switch](http://i.imgur.com/YKDq22v.png)
+![Switch](http://i.imgur.com/jNymEl5.png)
 
 * Click on the **Camera Icon** and a Drop up will appear. Which contains thumbnails of the video and its title.
 * Click on the thumbnail/title to **switch** to that media.
