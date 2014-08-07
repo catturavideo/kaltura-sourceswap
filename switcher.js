@@ -73,7 +73,7 @@
                     }
 
                     loaded.then(function () {
-                        var original = " (" + arguments[0].name + ")";
+                        var original = "(" + arguments[0].name + ")";
                         var list     = "<ul style ='list-style: none; position: absolute; right: 0; bottom: 100%; display: block; background-color: #222222; margin: 0; padding: 0px; width: 200px;'>";
                         list += makeListItem(arguments[0].rootEntryId, arguments[0].thumbnailUrl, "Main Media",false);
                         for (var i = 1; i < arguments.length; i++) {
@@ -125,7 +125,8 @@
             setup: function(){
                 sources     = [];
                 sources     = JSON.parse(this.getConfig('media').partnerData)['sources'];
-                if(sources.length >=1){
+                //v2 chance to make source!=undefined to skip only on video.
+                if( sources != undefined && sources.length >=1){
                      sources.unshift(this.getConfig('media').id);
                 }else{
                     sources = [this.getConfig('media').id];
@@ -148,3 +149,4 @@
         }));
     });
 })(kWidget,jQuery)
+cdn.catturavideo.com/assets/sourcetoggle/2.0.0/js/switcher-min.js

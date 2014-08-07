@@ -1,19 +1,36 @@
-#Cattura SourceToggle for the Kaltura Player for HTML5 v2
+#Cattura SourceToggle for Kaltura's Universal Player
 ***
-The Cattura platform enables you to have multiple source videos uploaded to Kaltura and utilized in the player experience. This plugin enables provides the ability to swap between the sources (and keep position)  by clicking a toggle button embeded in the player. 
+This Cattura plugin enables the user to switch between multi-source videos delivered to the Kaltura Platform through our CaptureCast&trade; Pro product. It will also keep position through each switch. Keep in mind that this is for the Universal Player only. 
 
 ##Setup
 
 1. Log into your Kaltura KMC account. 
 
-2. Create or Edit an existing Player
+2. Create or Edit an existing Player (Universal Only)
+	
+    a. To find the Universal Player click "Studio"
 
-3.  Copy the line below and paste into the "plug-in line" field on the Additional parameters field and click "Go".
+    b. Under the Kaltura Logo to the left of the screen you will find the "Universal" player
 
-   switcher.plugin=true&switcher.path=/content/uiconf/ps/kaltura/kdp/v3.6.9/plugins/facadePlugin.swf&switcher.relativeTo=video&switcher.position=before&switcher.includeInLayout=false&switcher.button=1&switcher.iframeHTML5Js1= https://dt3nu9g2bp5s4.cloudfront.net/assets/sourcetoggle/2.0.0/js/switcher-min.js
+3. On the left hand navbar look for the electric plug name ... plugins
 
+4. On this new window click on the "Ui Variables" label
 
-![Step 2](http://i.imgur.com/EWwl8u5.png)
+5. Click "[add]" 8 times to create 8 "key" and "value" pairs
+
+6. Fill these 8 "key and 'value' pairs in with thier repective values as per the table below. 
+ 
+
+| key                      |   | value                                                                             |
+|--------------------------|---|-----------------------------------------------------------------------------------|
+| switcher.plugin          |   | true                                                                              |
+| switcher.path            |   | /content/uiconf/ps/kaltura/kdp/v3.6.9/plugins/facadePlugin.swf                    |
+| switcher.relativeTo      |   | video                                                                             |
+| switcher.position        |   | before                                                                            |
+| switcher.includeInLayout |   | false                                                                             |
+| switcher.button          |   | 1                                                                                 |
+| Kaltura.LeadWithHTML5    |   | true                                                                              |
+| switcher.iframeHTML5Js1  |   | https://dt3nu9g2bp5s4.cloudfront.net/assets/sourcetoggle/2.0.0/js/switcher-min.js |
 
 ***
 
@@ -34,24 +51,18 @@ The Cattura platform enables you to have multiple source videos uploaded to Kalt
 ## Known Issues ##
 
  * The Kaltura HTML5 v2 player must play for ~1 second after the switch before it is able to seek to the correct position *
- * Onload all thumbnails may not load aswell as a failure to switch to that media. This is a problem with Kaltura unable to seek find thier own entryID number.* 
  
+ * Onload all thumbnails may not load aswell as a failure to switch to that media. This is a problem with a the entitlement structure within Kaltura. To get around the missing thumbnails and failure to switch **Do Not** associate your media with a category.*
+
 *_This is a known Kaltura issue and tickets have been issued._
 
-***
-## Updating Player  
-*  As of writing this document the HTML5 v2 player has not been released. 
-1. Login to KMC and go to studio. 
-2. Create or edit an existing player. 
-3. Select features
-4. Add "Kaltura.LeadWithHTML5" and set to true in Additional parameters
-5. Save 
-6. Copy the player id 
-7. Go to http://player.kaltura.com/kWidget/tests/PlayerVersionUtility.html and log in
-8. Paste the id and update player to a V2 player  
 
-***
+
 ## Changelog ##
+
+#### 1.0.1: Dalmatian Silver ####
+
+* When using with a single video the player should not crash now. 
 
 #### 1.0.0: Mercury Boxer####
 
