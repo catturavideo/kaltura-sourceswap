@@ -49,8 +49,7 @@ This Cattura plugin enables the user to switch between multi-source videos deliv
 
 ***
 ## Known Issues ##
- * If a source is missing thumbnail broken the plugin will fail to switch, fail to load or crash the player all together. We are currently working on a solution but the easiest solution is to make sure the sources are present before playing. 
-
+  
  * The Kaltura HTML5 v2 player must play for ~1 second after the switch before it is able to seek to the correct position *
 
 *_This is a known Kaltura issue and tickets have been issued._
@@ -62,9 +61,13 @@ If videos are not populating the dropUp (ie. failed thumbnails and switches).
 
 First and formost make sure all sources are uploaded and presetn. Else please do the following:
 1. Go to Settings -> Integration Settings.
+
 2. Look for the section "Entitlement Settings". It should be on the lower left hand corner. 
+
 3. Remove (if it exists) the "cattura perspectives" entitlement.
+
 4. Click "Save Settings"
+
 
 ***
 
