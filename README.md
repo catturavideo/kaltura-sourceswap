@@ -60,6 +60,7 @@ This Cattura plugin enables the user to switch between multi-source videos deliv
 If videos are not populating the dropUp (ie. failed thumbnails and switches).
 
 First and formost make sure all sources are uploaded and presetn. Else please do the following:
+
 1. Go to Settings -> Integration Settings.
 
 2. Look for the section "Entitlement Settings". It should be on the lower left hand corner. 
