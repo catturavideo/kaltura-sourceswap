@@ -38,7 +38,7 @@ This Cattura plugin enables the user to switch between multi-source videos deliv
 
 ![Switch](http://i.imgur.com/jNymEl5.png)
 
-* Click on the **Camera Icon** and a Drop up will appear. Which contains thumbnails of the video and its title.
+* Click on the **Camera Icon** and dropUP will appear. Which contains thumbnails of the video and its title.
 * Click on the thumbnail/title to **switch** to that media.
 * A **magenta** tab will appear on the right hand side of the current playing video.
 * Hovering over a media entry will **highlight** said source
@@ -49,14 +49,24 @@ This Cattura plugin enables the user to switch between multi-source videos deliv
 
 ***
 ## Known Issues ##
+ * If a source is missing thumbnail broken the plugin will fail to switch, fail to load or crash the player all together. We are currently working on a solution but the easiest solution is to make sure the sources are present before playing. 
 
  * The Kaltura HTML5 v2 player must play for ~1 second after the switch before it is able to seek to the correct position *
- 
- * Onload all thumbnails may not load aswell as a failure to switch to that media. This is a problem with a the entitlement structure within Kaltura. To get around the missing thumbnails and failure to switch **Do Not** associate your media with a category.*
 
 *_This is a known Kaltura issue and tickets have been issued._
 
+***
+##Kaltura Instance Confilcts and Solutions###
 
+If videos are not populating the dropUp (ie. failed thumbnails and switches).
+
+First and formost make sure all sources are uploaded and presetn. Else please do the following:
+1. Go to Settings -> Integration Settings.
+2. Look for the section "Entitlement Settings". It should be on the lower left hand corner. 
+3. Remove (if it exists) the "cattura perspectives" entitlement.
+4. Click "Save Settings"
+
+***
 
 ## Changelog ##
 
