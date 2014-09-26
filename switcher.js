@@ -112,9 +112,9 @@
                                         _this.getPlayer().sendNotification('doPlay');
                                         _this.unbind('onChangeMediaDone',startPlay);
                                     }
-                                    _this.getPlayer().startTime = timeTemp;
                                     _this.getPlayer().sendNotification( "changeMedia", { 'entryId' : $(e.currentTarget).data('id') });
                                     _this.bind('onChangeMediaDone', startPlay);
+                                    _this.getPlayer().startTime = timeTemp;
                                 }
                             });
                     });
@@ -124,7 +124,13 @@
             },
             setup: function(){
                 sources     = [];
-                sources     = JSON.parse(this.getConfig('media').partnerData)['sources'];
+                var partner = this.getConfig('media').partnerData;
+                //v2 change to make sure if video is not ours plugin still works
+                if(partner == null){
+                    sources  = undefined;
+                }else{
+                    sources  = JSON.parse(partner)['sources'];
+                }
                 //v2 chance to make source!=undefined to skip only on video.
                 if( sources != undefined && sources.length >=1){
                      sources.unshift(this.getConfig('media').id);
@@ -149,4 +155,3 @@
         }));
     });
 })(kWidget,jQuery)
-cdn.catturavideo.com/assets/sourcetoggle/2.0.0/js/switcher-min.js

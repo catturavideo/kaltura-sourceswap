@@ -1,6 +1,6 @@
-#Cattura SourceToggle for Kaltura's Universal Player
+#Cattura 'Plain' SourceToggle for Kaltura's Universal Player
 ***
-This Cattura plugin enables the user to switch between multi-source videos delivered to the Kaltura Platform through our CaptureCast&trade; Pro product. It will also keep position through each switch. Keep in mind that this is for the Universal Player only. 
+This Cattura plugin enables the user to switch between multi-source videos delivered to the Kaltura Platform through our CaptureCast&trade; Pro product. It will also keep position through each switch. Keep in mind that this is for the Universal Player only.  Unlike the 'Original' Sourcetoggle this version will go through each source right after each other. 
 
 ##Setup
 
@@ -23,26 +23,20 @@ This Cattura plugin enables the user to switch between multi-source videos deliv
 
 | key                      |   | value                                                                             |
 |--------------------------|---|-----------------------------------------------------------------------------------|
-| switcher.plugin          |   | true                                                                              |
-| switcher.path            |   | /content/uiconf/ps/kaltura/kdp/v3.6.9/plugins/facadePlugin.swf                    |
-| switcher.relativeTo      |   | video                                                                             |
-| switcher.position        |   | before                                                                            |
-| switcher.includeInLayout |   | false                                                                             |
-| switcher.button          |   | 1                                                                                 |
+| toggle.plugin          |   | true                                                                              |
+| toggle.path            |   | /content/uiconf/ps/kaltura/kdp/v3.6.9/plugins/facadePlugin.swf                    |
+| toggle.relativeTo      |   | video                                                                             |
+| toggle.position        |   | before                                                                            |
+| toggle.includeInLayout |   | false                                                                             |
+| toggle.button          |   | 1                                                                                 |
 | Kaltura.LeadWithHTML5    |   | true                                                                              |
-| switcher.iframeHTML5Js1  |   | https://dt3nu9g2bp5s4.cloudfront.net/assets/sourcetoggle/2.0.0/js/switcher-min.js |
+| toggle.iframeHTML5Js1  |   | https://dt3nu9g2bp5s4.cloudfront.net/assets/sourcetoggle/2.0.0/js/toggle.js |
 
 ***
 
 ## Notes ##
 
-![Switch](http://i.imgur.com/jNymEl5.png)
-
-* Click on the **Camera Icon** and dropUP will appear. Which contains thumbnails of the video and its title.
-* Click on the thumbnail/title to **switch** to that media.
-* A **magenta** tab will appear on the right hand side of the current playing video.
-* Hovering over a media entry will **highlight** said source
-* Clicking on an already playing media source will do nothing. 
+* Clicking on the camera icon will cause the video to switch to the next video inline. 
 * If the camera icon has a **red slash** through it the plugin is unavailable due to this video being a single source entry.
 
 ![NoSwitch](http://i.imgur.com/qumfVQ6.png)
@@ -94,15 +88,7 @@ As a possible work around:
 
 ## Changelog ##
 
-#### 1.0.2: Sheepdog Copper ####
-
-* Plugin fails when playing a Non-Cattura Uploaded video. This should be fixed now but will not handle multisource only single source.
-
-#### 1.0.1: Dalmatian Silver ####
-
-* When using with a single video the player should not crash now. 
-
-#### 1.0.0: Mercury Boxer####
+#### 1.0.0 Pointer Steel ####
 
 * Initial release
 
