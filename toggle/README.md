@@ -52,43 +52,43 @@ This Cattura plugin enables the user to switch between multi-source videos deliv
 
 ***
 ##Kaltura Instance Confilcts and Solutions###
-
-#####Issue #1: 
-
-If videos are not populating the dropUp (ie. failed thumbnails and switches).
-
-First and formost make sure all sources are uploaded and presetn. Else please do the following:
-
-1. Go to Settings -> Integration Settings.
-
-2. Look for the section "Entitlement Settings". It should be on the lower left hand corner. 
-
-3. Remove (if it exists) the "cattura perspectives" entitlement.
-
-4. Click "Save Settings"
-
-#####Issue #2
+***
+#####Issue #1 Using Non-Cattura Uploads
 
 If you are using the Cattura Plugin and Non-Cattura Uploads the switcher will not work. 
 
 As a possible work around: 
 
 1. Download and Install Kaltura's Client Side API
-
 2. Under tha "main media" file find the 'partnerData' variable it should be null
-
 3. Make an array of ids filled with the videoIds  you wish to associate. i.e. ['i_eidn33','i_ewen23',...]
-
 4. Set "partnerData" to that array
 
 ######Again this is not supported by Cattura and is not guaranteed to work.   
+***
+#####Issue #2: Inconsistance Toggling
+When you try to toggle to the next video does it sometimes work and othertimes misfire ? You may be missing a web compliant version of the source.  
 
+Try this: 
+1. Log into your KMC environment with your administrator account
+2. Click on "Settings" tab on the top menu
+3. Click on "Transcoding Settings"
+4. Checkmark "WebM" Conversion flavor
+5. Click the "Save Changes" button at the bottom of the page.
+
+Now each video/source uploaded will have a "WebM" version created. 
 
 ***
 
 ## Changelog ##
 
-#### 1.0.0 Pointer Steel ####
+#### 1.5.0 Narcissus Duck  ( 10/20/2014)####
+
+* Added Kaltura spinner to smooth out transitions between swtiches
+* Fixed race conditions such that video will switch properly each time. 
+* Will now work on Chrome,Firefox and IE8 on Mac, Windows and Linux.
+
+#### 1.0.0 Lily Hen  ####
 
 * Initial release
 
