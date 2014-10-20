@@ -56,25 +56,28 @@ mw.kalturaPluginWrapper(function(){
                         for(var x = 0; x< arguments.length; x++){
                             media.push(arguments[x].rootEntryId);
                         }
-                        // console.log("Media:");
-                        // console.log(media);
-
                         var switcher = function(){
                             var timeTemp = _this.getPlayer().currentTime; 
-                            // console.log("time: "+ timeTemp);
                             var startPlay = function(){
-                                _this.getPlayer().sendNotification('doPlay');
-                                _this.unbind('onChangeMediaDone',startPlay);
+                                _this.getPlayer().sendNotification("doPlay");
+                                _this.getPlayer().sendNotification("doSeek", timeTemp);
+                                _this.unbind('onChangeMediaDone');
                             }
-                            _this.getPlayer().sendNotification( "changeMedia", { 'entryId' : media[position] });
                             _this.bind('onChangeMediaDone', startPlay);
-                            _this.getPlayer().startTime = timeTemp;
-                            // console.log("start:"+_this.getPlayer().startTime);
+
+                            _this.getPlayer().sendNotification( "changeMedia", { 'entryId' : media[position] });
+                           
+                            // show the spinner while change media is active:
+                            _this.bind('playerReady', function(){
+                                _this.getPlayer().sendNotification('showSpinner');
+                                 _this.unbind('playerReady');
+                            });
+                           
+                            
                             position++
                             if(position == media.length){
                                 position = 0;
                             }
-                            // console.log(position);
                         };
                         $(".toggle").on('click',switcher);
                     });
@@ -83,15 +86,9 @@ mw.kalturaPluginWrapper(function(){
             },
         setup: function(){
             sources     = [];
-            // console.log("1. Sources: ");
-            // console.log(sources);
             var partner = this.getConfig('media');
-            // console.log("1. partner: ");
-            // console.log(partner);
 
             partner = partner.partnerData;
-            // console.log("2. partner: ");
-            // console.log(partner);
 
             //v2 change to make sure if video is not ours plugin still works
             if(partner == null){
@@ -99,22 +96,13 @@ mw.kalturaPluginWrapper(function(){
             }else{
                 sources  = JSON.parse(partner)['sources'];
             }
-            // console.log("2. sources: ");
-            // console.log(sources);
-
             //v2 chance to make source!=undefined to skip only on video.
             if( sources != undefined && sources.length >=1){
                  sources.unshift(this.getConfig('media').id);
             }else{
                 sources = [this.getConfig('media').id];
             }
-            // console.log("3. sources: ");
-            // console.log(sources);
-
             var api     = new kWidget.api({ wid: this.getPlayer().evaluate("{configProxy.kw.id}") });
-            // console.log("1. Api:");
-            // console.log(api);
-
             var requestMediaData = function(element){
                 var defer = $.Deferred();
                 api.doRequest({
@@ -127,12 +115,8 @@ mw.kalturaPluginWrapper(function(){
             for (var i = 0, promises = []; i < sources.length; i++) {
                 promises.push(requestMediaData(sources[i]));
             }
-            // console.log("1. Promise");
-            // console.log(promises);
 
             loaded = $.when.apply($, promises);
-            // console.log("1 loaded:");
-            // console.log(loaded);
 
         }    
     }));
