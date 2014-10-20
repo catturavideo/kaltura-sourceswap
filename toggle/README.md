@@ -60,8 +60,11 @@ If you are using the Cattura Plugin and Non-Cattura Uploads the switcher will no
 As a possible work around: 
 
 1. Download and Install Kaltura's Client Side API
+
 2. Under tha "main media" file find the 'partnerData' variable it should be null
+
 3. Make an array of ids filled with the videoIds  you wish to associate. i.e. ['i_eidn33','i_ewen23',...]
+
 4. Set "partnerData" to that array
 
 ######Again this is not supported by Cattura and is not guaranteed to work.   
@@ -70,10 +73,15 @@ As a possible work around:
 When you try to toggle to the next video does it sometimes work and othertimes misfire ? You may be missing a web compliant version of the source.  
 
 Try this: 
+
 1. Log into your KMC environment with your administrator account
+
 2. Click on "Settings" tab on the top menu
+ 
 3. Click on "Transcoding Settings"
+ 
 4. Checkmark "WebM" Conversion flavor
+ 
 5. Click the "Save Changes" button at the bottom of the page.
 
 Now each video/source uploaded will have a "WebM" version created. 
