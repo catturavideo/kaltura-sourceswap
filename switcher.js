@@ -110,11 +110,19 @@
                                     var timeTemp = _this.getPlayer().currentTime; 
                                     var startPlay = function(){
                                         _this.getPlayer().sendNotification('doPlay');
-                                        _this.unbind('onChangeMediaDone',startPlay);
+                                        _this.getPlayer().sendNotification("doSeek", timeTemp);
+                                        _this.unbind('onChangeMediaDone');
                                     }
-                                    _this.getPlayer().sendNotification( "changeMedia", { 'entryId' : $(e.currentTarget).data('id') });
+                                    
                                     _this.bind('onChangeMediaDone', startPlay);
-                                    _this.getPlayer().startTime = timeTemp;
+                                    _this.getPlayer().sendNotification( "changeMedia", { 'entryId' : $(e.currentTarget).data('id') });
+                                    
+                                    // show the spinner while change media is active:
+                                    _this.bind('playerReady', function(){
+                                        _this.getPlayer().sendNotification('showSpinner');
+                                        _this.unbind('playerReady');
+                                    });
+
                                 }
                             });
                     });

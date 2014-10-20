@@ -2,7 +2,6 @@ mw.kalturaPluginWrapper(function(){
     var loaded;
     var sources;
 
- 
     mw.PluginManager.add( 'toggle', mw.KBaseComponent.extend({
  
         defaultConfig: {
