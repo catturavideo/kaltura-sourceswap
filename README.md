@@ -2,7 +2,8 @@
 ***
 This Cattura plugin enables the user to switch between multi-source videos delivered to the Kaltura Platform through our CaptureCast&trade; Pro product. It will also keep position through each switch. Keep in mind that this is for the Universal Player only. 
 
-##Setup
+#Setup
+##Step 1 : Player
 
 1. Log into your Kaltura KMC account. 
 
@@ -16,9 +17,9 @@ This Cattura plugin enables the user to switch between multi-source videos deliv
 
 4. On this new window click on the "Ui Variables" label
 
-5. Click "[add]" 8 times to create 8 "key" and "value" pairs
+5. Click "[add]" 9 times to create 9 "key" and "value" pairs
 
-6. Fill these 8 "key and 'value' pairs in with thier repective values as per the table below. 
+6. Fill these 9 "key and 'value' pairs in with thier repective values as per the table below. 
  
 
 | key                      |   | value                                                                             |
@@ -30,7 +31,41 @@ This Cattura plugin enables the user to switch between multi-source videos deliv
 | switcher.includeInLayout |   | false                                                                             |
 | switcher.button          |   | 1                                                                                 |
 | Kaltura.LeadWithHTML5    |   | true                                                                              |
-| switcher.iframeHTML5Js1  |   | https://dt3nu9g2bp5s4.cloudfront.net/assets/sourcetoggle/2.0.0/js/switcherISG-min.js |
+| switcher.iframeHTML5Js1  |   | https://dt3nu9g2bp5s4.cloudfront.net/assets/sourcetoggle/2.0.0/js/switcher-min.js |
+| streamerType  |   | http |
+
+***
+##Step2 : Transcoding
+
+1. Click on "Settings" tab on the top menu
+ 
+2. Click on "Transcoding Settings"
+ 
+3. Checkmark "WebM" Conversion flavor
+
+4. Click the "Save Changes" button at the bottom of the page.
+
+    This will only transcode new files not prexisting ones. To transcode those checkout Issue#3 under       "Kaltura Instance Confilcts and Solutions"  below. 
+
+5. Then when you click on "preview & embed" make sure to select the correct player and change the Deilvery type to "HTTP Progressive download" 
+
+6. The Embed type can be either "Auto" or "Dynamic" 
+
+***
+##Step 3 : Embeding
+
+1. After Step 1 and 2 go to the 'content' page and select  "preview and embed" under actions  on the video you wish to embed.
+
+2. Make sure to select new player 
+
+3. Make sure Delivery Type is "HTTP Progressive Download" 
+
+4. Make sure Embed type is "Auto" or "Dynamic"
+
+5. Then you are ready to Embed. 
+
+
+
 
 ***
 
@@ -94,21 +129,21 @@ As a possible work around:
 ***
 
 #####Issue #3 Inconsistance switching and failing to seek
-When you try to toggle to the next video does it sometimes work and othertimes misfire ? You may be missing a web compliant version of the source.  
 
-Try this: 
+1. Make sure you have completed the "Setup Step 2 : Transcoding" section. 
 
-1. Log into your KMC environment with your administrator account
+2. If that is done. Go to the "Content" page. 
 
-2. Click on "Settings" tab on the top menu
- 
-3. Click on "Transcoding Settings"
- 
-4. Checkmark "WebM" Conversion flavor
- 
-5. Click the "Save Changes" button at the bottom of the page.
+3. From there select the source link. A modal will appear titled "Edit Entry"
 
-Now each video/source uploaded will have a "WebM" version created. 
+4. Click on "flavors" on the left hand side.
+
+5. Make sure 'WebM' is one of the transcoding flavors.
+
+6. If not find "WebM" then go to the right hand side and select convert under its actions. 
+
+7. Repeat steps 3 to 6 for all sources/videos associated with that multisource capture.
+
 
 ***
 ## Changelog ##
