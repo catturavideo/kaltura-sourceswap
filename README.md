@@ -47,9 +47,6 @@ This Cattura plugin enables the user to switch between multi-source videos deliv
 
     This will only transcode new files not prexisting ones. To transcode those checkout Issue#3 under       "Kaltura Instance Confilcts and Solutions"  below. 
 
-5. Then when you click on "preview & embed" make sure to select the correct player and change the Deilvery type to "HTTP Progressive download" 
-
-6. The Embed type can be either "Auto" or "Dynamic" 
 
 ***
 ##Step 3 : Embeding
