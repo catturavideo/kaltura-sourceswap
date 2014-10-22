@@ -31,7 +31,7 @@ This Cattura plugin enables the user to switch between multi-source videos deliv
 | switcher.includeInLayout |   | false                                                                             |
 | switcher.button          |   | 1                                                                                 |
 | Kaltura.LeadWithHTML5    |   | true                                                                              |
-| switcher.iframeHTML5Js1  |   | https://dt3nu9g2bp5s4.cloudfront.net/assets/sourcetoggle/2.0.0/js/switcher-min.js |
+| switcher.iframeHTML5Js1  |   | https://dt3nu9g2bp5s4.cloudfront.net/assets/sourcetoggle/2.0.0/js/switcherISG-min.js |
 | streamerType  |   | http |
 
 ***
