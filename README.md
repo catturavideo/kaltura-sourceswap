@@ -2,6 +2,8 @@
 ***
 This Cattura plugin enables the user to switch between multi-source videos delivered to the Kaltura Platform through our CaptureCast&trade; Pro product. It will also keep position through each switch. Keep in mind that this is for the Universal Player only. 
 
+*_Please Note that this version works on Safari, Chrome, Explore but is intermittend on Firefox. We are currently working on this._ 
+
 #Setup
 ##Step 1 : Player
 
