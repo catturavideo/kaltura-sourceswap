@@ -150,7 +150,7 @@ As a possible work around:
 #### 1.5.0: Irish Setter Gold  (10/20/2014) ####
 * Added Kaltura spinner to smooth out transitions between swtiches
 * Fixed race conditions such that video will switch properly each time. 
-* Will now work on Chrome,Firefox and IE8 on Mac, Windows and Linux.
+* Will now work on Chrome, Safari, and Internet Explorer on Mac, Windows and Linux. **Firefox has been inconsistent and may not keep position on each switch.
 
 #### 1.0.2: Sheepdog Copper ####
 
