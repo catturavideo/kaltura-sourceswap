@@ -2,7 +2,7 @@
 ***
 This Cattura plugin enables the user to switch between multi-source videos delivered to the Kaltura Platform through our CaptureCast&trade; Pro product. It will also keep position through each switch. Keep in mind that this is for the Universal Player only.  Unlike the 'Original' Sourcetoggle this version will go through each source right after each other. 
 
-*_Please note: This version works reliably on Safari, Chrome and Internet Explorer on Mac, Windows and Linux computers. However, Firefox, on all platforms, has been inconsistent and may not keep position on each switch. We are currently working with Kaltura to get this working 100% across all browsers and platforms._ 
+*_This updated plugin works reliably on Safari, Chrome and Internet Explorer on Mac, Windows and Linux computers. On all platforms Firefox has been inconsistent and may not keep the playhead’s position on each source switch. We are still working with Kaltura to get this working 100% across all browsers and platforms and has been accepted as a bug in their ticketing system.._ 
 
 
 #Setup
